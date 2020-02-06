@@ -537,6 +537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1399502864}
+  - component: {fileID: 1399502865}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -558,6 +559,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399502865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399502863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82133e6c450870d4490565ebe357f152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 685961796}
+  contentText: {fileID: 1828917123}
+  title: Hello world
+  mainText: Take your chance and play the games
 --- !u!1 &1505465155
 GameObject:
   m_ObjectHideFlags: 0

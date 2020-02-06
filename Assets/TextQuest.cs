@@ -9,9 +9,9 @@ public class TextQuest : MonoBehaviour
     public Text titleText;
     public Text contentText;
     [Header("Config")]
-    [Tooltip("Название игры")] public string title = "Hello world";
+    [Tooltip("Название игры")] public string title = "let's get it started";
 
-    [TextArea(minLines: 10, maxLines: 20)] public string mainText = "Take your chance and play the games";
+    [TextArea(minLines: 10, maxLines: 20)] public string mainText = "Would you like play the game";
     // Start is called before the first frame update
     void Start()
     {
