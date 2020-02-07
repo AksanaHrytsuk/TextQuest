@@ -5,23 +5,54 @@ using UnityEngine.UI;
 
 public class TextQuest : MonoBehaviour
 {
-    [Header("Elements")]
-    public Text titleText;
-    public Text contentText;
-    [Header("Config")]
-    [Tooltip("Название игры")] public string title = "let's get it started!";
+  [Header("Elements")]
+  public Text titleText;
+  public Text textOfTheGame;
+  [Header("Config")]
+  [Tooltip("Название игры")] public string title = "Hello world";
 
-    [TextArea(minLines: 10, maxLines: 20)] public string mainText = "Would you like playing the game?";
-    // Start is called before the first frame update
-    void Start()
+
+  // Start is called before the first frame update
+  public Step activeStep;
+  void Start()
+  {
+    titleText.text = title;
+    //  textOfTheGame.text = mainText;
+    textOfTheGame.text = activeStep.mainText;
+
+    //    int[] numbers = { 1, 3, 7, 8, 2 };
+    //    numbers[2] = 6;
+    //    Debug.Log(numbers);
+
+    //    string[] days = { "пн", "вт", "ср", "чт", "пт", "суб", "вс" };
+    //    Debug.Log(days[5]);
+
+    //    Debug.Log(days.Length);
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+    if (Input.GetKeyDown(KeyCode.Alpha1))
     {
-        titleText.text = title;
-        contentText.text = mainText;
+        checkPress(1);
+    }
+    if (Input.GetKeyDown(KeyCode.Alpha2))
+    {
+        checkPress(2);
     }
 
-    // Update is called once per frames
-    void Update()
+
+  }
+  void checkPress(int index)
+  {
+    if (activeStep.nextSteps.Length > index)
     {
-        
+      if (activeStep.nextSteps[index] != null)
+      {
+        activeStep = activeStep.nextSteps[index];
+        textOfTheGame.text = activeStep.mainText;
+      }
     }
-}
+  }
+} 
