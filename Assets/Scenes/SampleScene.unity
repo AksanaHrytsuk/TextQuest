@@ -449,7 +449,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainText: "\u0412\u044B \u0437\u0430\u0448\u043B\u0438 \u0432 \u043A\u043E\u043C\u043D\u0430\u0442\u0443
     2"
-  nextSteps: []
+  nextSteps:
+  - {fileID: 1509737242}
+  - {fileID: 1083447137}
 --- !u!1 &1194245858
 GameObject:
   m_ObjectHideFlags: 0
