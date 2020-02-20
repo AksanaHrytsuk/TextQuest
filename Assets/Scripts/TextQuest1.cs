@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextQuest : MonoBehaviour
+public class TextQuest1 : MonoBehaviour
 {
+  public Data dataAsset; 
   [Header("Elements")]
   public Text titleText;
   public Text textOfTheGame;
@@ -13,25 +14,26 @@ public class TextQuest : MonoBehaviour
 
 
   // Start is called before the first frame update
-  public Step activeStep;
+  public StepData activeStep;
+  public Image contentImage;
   void Start()
   {
     titleText.text = title;
-    //  textOfTheGame.text = mainText;
     textOfTheGame.text = activeStep.mainText;
+        //  textOfTheGame.text = mainText;
 
-    //    int[] numbers = { 1, 3, 7, 8, 2 };
-    //    numbers[2] = 6;
-    //    Debug.Log(numbers);
+        //    int[] numbers = { 1, 3, 7, 8, 2 };
+        //    numbers[2] = 6;
+        //    Debug.Log(numbers);
 
-    //    string[] days = { "пн", "вт", "ср", "чт", "пт", "суб", "вс" };
-    //    Debug.Log(days[5]);
+        //    string[] days = { "пн", "вт", "ср", "чт", "пт", "суб", "вс" };
+        //    Debug.Log(days[5]);
 
-    //    Debug.Log(days.Length);
-  }
+        //    Debug.Log(days.Length);
+    }
 
-  // Update is called once per frame
-  void Update()
+    // Update is called once per frame
+    void Update()
   {
     if (Input.GetKeyDown(KeyCode.Alpha1))
     {
