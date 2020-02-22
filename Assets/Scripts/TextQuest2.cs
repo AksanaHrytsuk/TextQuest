@@ -54,7 +54,7 @@ public class TextQuest2 : MonoBehaviour
       {
         activeStep = activeStep.nextSteps[index];
         textOfTheGame.text = activeStep.mainText;
-        contentBackground.color = activeStep.stepColor;
+        //contentBackground.color = activeStep.stepColor;
       }
     }
   }
